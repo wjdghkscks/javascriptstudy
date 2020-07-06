@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+
+<title>연산자</title>
+<script type="text/javascript">
+
+	var s1 = 7;
+	var s2 = 2;
+
+/* 
+
+* 연산자
+
+- 산술 연산자	: +, -, *, /, %
+
+- 관계 연산자	: >, >=, <, <=, ==, !=
+	
+- 논리 연산자	: &&, ||, !
+
+- 증감 연산자	: ++변수, 변수++, --변수, 변수--
+
+- 대입 연산자	: +=, -=, *=, /=, %=
+	
+- 삼항 연산자	: var 변수 = (조건식? 참일_때: 거짓일_때);
+
+*/
+
+	// 산술 연산자
+	document.write("<h2>산술 연산자</h2>");
+	
+	document.write("<h3>");
+	document.write(s1 + " + " + s2 + " = " + (s1 + s2) + "<br>");
+	document.write(s1 + " - " + s2 + " = " + (s1 - s2) + "<br>");
+	document.write(s1 + " * " + s2 + " = " + (s1 * s2) + "<br>");
+	document.write(s1 + " / " + s2 + " = " + (s1 / s2) + "<br>");
+	document.write(s1 + " % " + s2 + " = " + (s1 % s2) + "<br>");
+	document.write("</h3>");
+	
+	document.write("<hr>");
+	
+	// 관계 연산자
+	document.write("<h2>관계 연산자</h2>");
+	document.write(s1 + " > " + s2 + " = " + (s1>s2) + "<br>")
+	document.write(s1 + " < " + s2 + " = " + (s1<s2) + "<br>")
+	document.write(s1 + " >= " + s2 + " = " + (s1>=s2) + "<br>")
+	document.write(s1 + " <= " + s2 + " = " + (s1<=s2) + "<br>")
+	document.write(s1 + " == " + s2 + " = " + (s1==s2) + "<br>")
+	document.write(s1 + " != " + s2 + " = " + (s1!=s2) + "<br>")
+	
+		// 관계 연산자 주의 사항
+		document.write("<h2>관계 연산자 주의 사항</h2>");
+		s1 = 1000;
+		s2 = '1000';
+		document.write("<h3>관계 연산자</h3>");
+		document.write(s1 + " == " + s2 + " = " + (s1==s2) + "<br>")
+		document.write(s1 + " != " + s2 + " = " + (s1!=s2) + "<br>")
+		
+		s1 = true;
+		s2 = 1;
+		document.write(s1 + " == " + s2 + " = " + (s1==s2) + "<br>")
+		
+		s1 = 0;
+		s2 = false;
+		document.write(s1 + " == " + s2 + " = " + (s1==s2) + "<br>")
+		
+		// 해결 방법
+		// 일치 연산자(===) 를 사용 시 자료형까지 같아야 true가 출력됨
+		document.write("<h2>해결 방법</h2>");
+		s1 = 1000;
+		s2 = '1000';
+		document.write("<h3>관계 연산자</h3>");
+		document.write(s1 + " == " + s2 + " = " + (s1==s2) + "<br>")
+		document.write(s1 + " === " + s2 + " = " + (s1!=s2) + "<br>")
+		
+		s1 = true;
+		s2 = 1;
+		document.write(s1 + " == " + s2 + " = " + (s1==s2) + "<br>")
+		
+		s1 = 0;
+		s2 = false;
+		document.write(s1 + " == " + s2 + " = " + (s1==s2) + "<br>")
+		
+	document.write("<hr>");
+	
+	// 논리 연산자
+	document.write("<h3>논리 연산자</h3>");
+	s1 = true;
+	s2 = false;
+	document.write(s1 + " && " + s1 + " = " + (s1 && s1) + "<br>");
+	document.write(s2 + " && " + s1 + " = " + (s1 && s2) + "<br>");
+	document.write(s1 + " && " + s2 + " = " + (s2 && s1) + "<br>");
+	document.write(s2 + " && " + s2 + " = " + (s2 && s2) + "<br>");
+	
+	document.write("<br>");
+	
+	document.write(s1 + " || " + s1 + " = " + (s1 || s1) + "<br>");
+	document.write(s2 + " || " + s1 + " = " + (s1 || s2) + "<br>");
+	document.write(s1 + " || " + s2 + " = " + (s2 || s1) + "<br>");
+	document.write(s2 + " || " + s2 + " = " + (s2 || s2) + "<br>");
+	
+	
+	document.write("<hr>");
+	
+	// 증감 연산자
+	document.write("<h3>증감 연산자</h3>");
+	
+	s1 = 10;
+	s2 = 10;
+	
+	document.write("s1 = " + ++s1 + "<br>");
+	document.write("s2 = " + s2++ + "<br>");
+	
+	document.write("s1 = " + s1 + "<br>");
+	document.write("s2 = " + s2 + "<br>");
+	
+	document.write("<hr>");
+	
+	// 대입 연산자
+	document.write("<h3>대입 연산자</h3>");
+	
+	s1 = 14;
+	
+	document.write("s1 += 3 => " + (s1 += 3) + "<br>");
+	document.write("s1 -= 3 => " + (s1 -= 3) + "<br>");
+	document.write("s1 *= 3 => " + (s1 *= 3) + "<br>");
+	document.write("s1 /= 3 => " + (s1 /= 3) + "<br>");
+	document.write("s1 %= 3 => " + (s1 %= 3) + "<br>");
+	
+	document.write("<hr>");
+	
+	// 삼항 연산자
+	document.write("<h3>삼항 연산자</h3>");
+	
+	// s1 이 90 이상이면 합격, 아니면 불합격
+	
+	s1 = 79;
+	res = (s1 >= 90)? "합격" : "불합격";
+	
+	document.write("당신은 " + res + " 입니다.<br>");
+	
+	// s1 이 짝수인지 홀수인지 판단
+	
+	s1 = 42;
+	res = (s1 % 2 == 0)? "짝수" : "홀수";
+	
+	document.write(s1 + "는 " + res + "입니다.<br>");
+	
+	// 근무시간이 8시간까지는 8950원, 초과 시 1.5배
+	
+	var time = 10;
+	var dan = 8950;
+	res = (s1 > 8)? ((dan * 8) + (1.5 * dan * (time - 8))) : (dan * time);
+	
+	document.write(time + "시간 근무 수당: " + res + "원<br>");
+	
+
+</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

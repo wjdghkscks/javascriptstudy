@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>변수</title>
+<script type="text/javascript">
+/*
+
+* 변수 선언
+
+- (JAVA와 달리) 변수를 만들 때 자료형을 지정하지 않음
+
+	1) 숫자로 시작하면 안됨
+	2) 대소문자를 구별
+	3) 기본적으로 소문자로 작성
+	4) 상수는 대문자
+	5) 문장이 끝날 때 세미콜론(;)을 붙임 (생략 가능)
+
+- 변수 선언 방법
+
+	var 변수명 = 데이터(정수, 실수, boolean, char, String, null, funcion, class, 객체);
+
+*/
+	
+	var res = 10;
+	document.write("<p>res = " + res + "</p>");
+	
+	res = 3.14;
+	document.write("<p>res = " + res + "</p>");
+	
+	res = true;
+	document.write("<p>res = " + res + "</p>");
+	
+	res = 'a';
+	document.write("<p>res = " + res + "</p>");
+	
+	res = "hello";
+	document.write("<p>res = " + res + "</p>");
+	
+	res = null;
+	document.write("<p>res = " + res + "</p>");
+	
+	// 변수 선언을 하지않아도 사용 가능
+	res2 = 'world';
+	document.write("<p>res2 = " + res2 + "</p>");
+	
+	// 선언 후 데이터를 저장하지 않고 출력을 요청할 시 오류(undefined) 발생
+	var res3;
+	document.write("<p>res3 = " + res3 + "</p>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

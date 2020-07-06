@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>대화 상자</title>
+<script type="text/javascript">
+
+/* 
+
+* JavaScript 에서 사용하는 대화 상자의 종류
+
+	1) alert("내용")
+	- 사용자에게 내용을 전달하는 역할
+	
+	2) confirm("내용")
+	- 사용자에게 내용을 전달하고, true/false 로 값을 받음
+	
+	
+	3) prompt("내용"), prompt("내용", 초기값)
+	- 사용자에게 정보를 받음
+
+*/
+
+document.write("<h2>");
+
+// 1) alert()
+// alert("Hello\nWorld");
+
+/* 2) confirm()
+var res = confirm("점심 식사 하셨나요?");
+document.write("점심 식사 여부: " + res);
+
+document.write("</h2>");
+*/
+
+/*
+var res = prompt("몇 살이세요?", "숫자만 입력하세요.");
+document.write("당신은 " + res + "살이군요!");
+*/
+
+// 정수를 입력받아서 짝수/홀수 판별하기
+var res = prompt("정수를 입력하세요.");
+res = (res % 2 == 0)? "짝수": "홀수";
+
+document.write("결과: " + res);
+
+
+</script>
+</head>
+
+<body>
+
+</body>
+
+</html>
