@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>배열 : Array</title>
+<script type="text/javascript">
+/* 
+
+* 배열
+
+- 같은 종류의 자료들의 묶음
+- JavaScript 는 데이터 타입에 영향을 받지 않음
+- 따라서 다른 종류의 데이터라도 묶을 수 있음
+
+*/
+	
+// 방법 1
+	document.write("<h2>방법 1</h2>");
+	// 배열 선언
+	var arr = new Array();
+	
+	// 데이터 입력
+	arr[0] = 1;
+	arr[1] = true;
+	arr[2] = 'A';
+	arr[3] = "ICT인재개발원";
+	arr[4] = 3.14;
+	
+	for (var i = 0; i < arr.length; i++) {
+		document.write("<h3>" + arr[i] + "</h3>");
+	}
+	
+	document.write("<hr>");
+	
+// 방법 2
+	document.write("<h2>방법 2</h2>");
+	var arr2 = new Array('boys', true, 'Y', 4201, 23.12045);
+	
+	for (var i = 0; i < arr2.length; i++) {
+		document.write("<h3>" + arr2[i] + "</h3>");
+	}
+	
+	document.write("<hr>");
+	
+	document.write("<h2>방법 3</h2>");
+	var arr3 = ["홍길동", "강길산", "임꺽정", "일지매"];
+	
+	for (var k in arr3) {
+		
+		/* // index 값 출력
+		document.write(k + "&nbsp;"); */
+		
+		document.write(arr3[k] + "&nbsp;");
+		
+	}
+	
+</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

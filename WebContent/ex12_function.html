@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>함수 : function</title>
+
+<script type="text/javascript">
+
+	function test1() {
+		document.write("Hi.");
+	}
+	function test1() {
+		document.write("Hello.");
+	}
+	
+	test1();
+	document.write("<hr>");
+
+	var test2 = function() {
+		document.write("하이~~");
+	};
+	
+	var test2 = function() {
+		document.write("헬로~~");
+	};
+	
+	test2();
+	document.write("<hr>");
+	
+	function test3() {
+		document.write("nice to meet you!");
+	}
+	
+	var test3 = function() {
+		document.write("만나서 반가워!");
+	}
+	
+	// 항성 선언 함수가 익명 함수보다 먼저 생성됨
+	test3();
+	document.write("<hr>");
+	
+	var test4 = function() {
+		document.write("만나서 반가워!");
+	}
+	
+	function test4() {
+		document.write("nice to meet you!");
+	}
+	
+	test4();
+	document.write("<hr>");
+	
+</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
