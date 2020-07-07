@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>String Class</title>
+
+<style type="text/css">
+	* {
+		margin: 10px;
+		text-align: center;
+	}
+</style>
+
+<script type="text/javascript">
+
+	// String 객체 생성
+	var str1 = "Hello";
+	var str2 = new String('Welcome');
+	
+	// 출력하기
+	document.write(str1 + "<br>");
+	document.write(str2 + "<br>");
+	
+	document.write("<hr>");
+	
+	// length : 길이
+	document.write("str1의 길이: " + str1.length + "<br>");
+	document.write("str2의 길이: " + str2.length + "<br>");
+	
+	document.write("<hr>");
+	
+	// charAt(n) : n번째 문자 구하기
+	document.write("str1의 첫번째 글자: " + str1.charAt(0) + "<br>");
+	document.write("str2의 첫번째 글자: " + str2.charAt(0) + "<br>");
+	
+	document.write("<hr>");
+	
+	// concat(str) : 현재 문자열 뒤에 문자열을 추가
+	document.write("str1에 문자열 추가 >> " + str1.concat(" 안녕하세요") + "<br>");
+	document.write("str2에 문자열 추가 >> " + str2.concat(" 환영합니다") + "<br>");
+	
+	document.write("<hr>");
+	
+	// indexOf('문자(열)') : 앞에서부터 해당 문자 또는 문자열의 위치값을 구함
+	//						 정규식 사용 불가
+	//						 -1은 '없다'는 의미
+	document.write("str1에서 첫번째 l의 index >> " + str1.indexOf('l') + "<br>");
+	document.write("str2에서 첫번째 l의 index >> " + str2.indexOf('l') + "<br>");
+	
+	document.write("<hr>");
+	
+	// indexOf('문자(열)', 검색시작위치) : 지정한 위치에서부터 해당 문자 또는 문자열의 위치값을 구함
+	//									   똑같은 문자(열)가 여러개일 경우, n번째 문자(열)을 찾는 데 사용
+	document.write(str1.indexOf('l', str1.indexOf('l')+1) + "<br>");
+	document.write(str2.indexOf('e', str1.indexOf('e')+1) + "<br>");
+	
+	document.write("<hr>");
+	
+	// lastIndexOf('문자(열)') : 해당 문자(열)의 가장 마지막 위치값을 구함
+	document.write(str1.lastIndexOf('e') + "<br>");
+	document.write(str2.lastIndexOf('c') + "<br>");
+		
+	document.write("<hr>");
+	
+	// search('문자(열)') : 앞에서부터 해당 문자(열)을 찾아 위치값을 구함
+	document.write(str1.search("ll") + "<br>");
+	document.write(str2.search("om") + "<br>");
+	
+	document.write("<hr>");
+	
+	// slice(시작num, 끝num) : 시작num 부터 끝num 까지의 문자열을 출력  
+	//						   끝에 해당하는 자리값의 문자는 포함되지 않음
+	//						   음수는 문자열 끝(-1)부터 시작
+	str1 = "Apple, Banana, Kiwi";
+	document.write(str1.slice(0, 5) + "<br>");
+	document.write(str1.slice(7, 13) + "<br>");
+	document.write(str1.slice(15, 19) + "<br>");
+	document.write(str1.slice(-5, -2) + "<br>");
+		
+	document.write("<hr>");
+	
+	// substring : slice와 같지만, 음수 사용 불가
+	document.write(str1.substring(0, 5) + "<br>");
+	document.write(str1.substring(7, 13) + "<br>");
+	document.write(str1.substring(15, 19) + "<br>");
+	
+	document.write("<hr>");
+	
+	// substr(시작num, 갯수num) : 시작num부터 갯수 만큼의 문자열을 출력
+	document.write(str1.substr(0, 5) + "<br>");
+	document.write(str1.substr(7, 5) + "<br>");
+	document.write(str1.substr(15, 4) + "<br>");
+	
+	document.write("<hr>");
+	
+	str1 = "Apple, Banana, Kiwi";
+	// replace(old, new) : 치환
+	document.write(str1.replace("Banana", "Mango") + "<br>");
+	
+	document.write("<hr>");
+	
+	// toUpperCase() : 대문자로 변경
+	// toLowerCase() : 소문자로 변경
+	document.write(str1.toUpperCase() + "<br>");
+	document.write(str1.toLowerCase() + "<br>");
+
+	document.write("<hr>");
+	
+	// split(구분자) : 구분자를 기준으로 문자열을 배열에 저장
+	var arr = str1.split(",");
+	for ( var k in arr) {
+		document.write(k + "번째 : " + arr[k] + "<br>");
+	}
+	
+	document.write("<hr>");
+	
+	// trim() : 공백 제거
+	str1 = "     apple          ";
+	document.write("str1의 자릿수 : " + str1.length + "<br>");
+	document.write("str1.trim()의 자릿수 : " + str1.trim().length + "<br>");
+	
+	
+
+</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

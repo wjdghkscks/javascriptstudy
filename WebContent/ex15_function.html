@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>콜백 함수</title>
+
+<script type="text/javascript">
+
+/* 
+
+* callback function 콜백 함수
+
+- 어떠한 이벤트 발생 이후 수행할 함수를 의미
+- 함수 내부에서 처리한 결과값을 함수 외부로 내보낼 때 사용
+- 함수를 하나의 매개 변수로 사용
+- 보통 비동기 프로그래밍에 사용
+
+- 사용 방법
+
+	function 이름(callback) {
+		실행문;
+		callback(결과);
+	}
+
+*/
+	// callback function
+	function myfunc() {
+		alert("경고 메시지1");
+	}
+
+	function send_go1() {
+		// setTimeout() : 정해진 시간 이후에 callback 함수를 실행 (1000 = 1s)
+		setTimeout(myfunc, 3000);
+	}
+	
+	function send_go2() {
+		// 익명 함수 이용
+		setTimeout(function() {
+			alert("경고 메시지2");
+		}, 3000);
+	}
+	
+	function send_go3() {
+		// 람다식
+		//	- JAVA : (메소드->{실행_내용}) / JavaScript : (function=>{실행_내용})
+		//	
+		// var fun1 = function([text]){return 실행_내용};
+		// var fun1 = ([text]=>{실행_내용});
+		
+		setTimeout(() => {
+			alert("경고 메시지3");
+		}, 1000);
+	}
+
+	function send_go4() {
+		var cnt = 0;
+		
+		// 주어진 시간이 경과한 후에 반복 실행
+		setInterval(function() {
+			cnt++;
+			document.write(cnt + "번 안녕하세요")
+		}, 1000);
+	}
+	
+	function send_go5() {
+		var cnt2 = 0;
+		setInterval(() => {
+			cnt2++;
+			document.write(cnt2 + "번 안녕하세요")
+		}, 1000);
+	}
+	
+</script>
+
+</head>
+
+<body>
+
+	<button onclick="send_go1()"> 클릭 1 </button>
+	<button onclick="send_go2()"> 클릭 2 </button>
+	<button onclick="send_go3()"> 클릭 3 </button>
+	<button onclick="send_go4()"> 클릭 4 </button>
+	<button onclick="send_go4()"> 클릭 5 </button>
+
+</body>
+
+</html>
