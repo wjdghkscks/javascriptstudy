@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Math Class</title>
+
+<script type="text/javascript">
+
+	// Math.PI							: 파이(3.141592...)
+	
+	document.write("PI : " + Math.PI + "<br>");
+	
+	
+	
+	// Math.round(num)					: num 반올림
+	
+	document.write("반올림(15.55) : " + Math.round(15.55) + "<br>");		// 16
+	document.write("반올림(15.44) : " + Math.round(15.44) + "<br>");		// 15
+	
+	// Math.ceil(num)					: num 올림
+	
+	document.write("올림(15.55) : " + Math.ceil(15.55) + "<br>");			// 16
+	document.write("올림(15.44) : " + Math.ceil(15.44) + "<br>");			// 16
+	
+	// Math.floor(num)					: num 내림 
+	
+	document.write("내림(15.55) : " + Math.floor(15.55) + "<br>");			// 15
+	document.write("내림(15.44) : " + Math.floor(15.44) + "<br>");			// 15
+	
+	// Math.abs(num)					: num 절대값
+	
+	document.write("절대값(15.55) : " + Math.abs(15.55) + "<br>");			// 15.55
+	document.write("절대값(-15.44) : " + Math.abs(-15.44) + "<br>");		// 15.44
+	
+	
+	
+	// Math.max(num1, num2, num3, ...)	: 최대값
+	
+	document.write("최대값 : " + Math.max(0, 150, 30, -20, -140) + "<br>");	// 150
+	
+	// Math.max(num1, num2, num3, ...)	: 최소값
+	
+	document.write("최소값 : " + Math.min(0, 150, 30, -20, -140) + "<br>");	// -140
+	
+	
+	
+	// Math.random()					: 0 이상 1 미만의 난수를 생성
+	
+	document.write("랜덤 : " + Math.random() + "<br>");
+	
+	document.write("<hr>");
+	
+	// 0 ~ 7 사이의 난수 발생
+	document.write("0 ~ 7 사이 숫자 랜덤 선택 : " + Math.floor(Math.random()*8) + "<br>");
+	
+	// 1 ~ 8 사이의 난수 발생
+	document.write("1 ~ 8 사이 숫자 랜덤 선택 : " + Math.ceil(Math.random()*8) + "<br>");
+	
+</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

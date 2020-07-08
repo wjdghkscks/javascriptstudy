@@ -7,21 +7,26 @@
 <title>함수 : function</title>
 <script type="text/javascript">
 	
-	/* 선언 함수는 먼저 구조를 파악할 때 생성되며, 이후 명령을 다시 시행 */
-	/* 따라서 생성 이전에도 함수를 사용할 수 있음 */
+	/* 
+	
+	- '선언 함수'는 먼저 전체 구조를 파악할 때 생성되며, 이후 명령을 다시 시행
+	   따라서 function 생성 이전에 호출하더라도 사용이 가능함
+	
+	*/
 	test1();
 	
 	function test1() {
 		document.write("<h2>선언 함수 test1()</h2>");
 	}
 	
-	/* 함수는 호출을 해야 실행할 수 있음 */
-	/* test1(); */
+	/*
 	
-	/* 익명 함수는 생성 전까지는 호출이 불가능함 */
+	- '익명 함수'는 생성되기 전까지 호출이 불가능함
+	
+	*/
+	
 	// msg();
 	
-	/* 익명 함수 */
 	var msg = function() {
 		document.write("<h2>익명 함수</h2>");
 	}
@@ -34,7 +39,7 @@
 
 <body>
 
-	<h1>Hello</h1>
+	<h1>Hello World</h1>
 
 </body>
 </html>

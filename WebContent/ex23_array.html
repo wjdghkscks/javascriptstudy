@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>array : 배열</title>
+
+	<script type="text/javascript">
+		
+		// <body> 내에 있는 id 나 class 등의 선택자를 사용하려면 jQuery 또는 Ajax 를 사용해야 함 
+		// var dd = document.getElementById("demo2").innerHTML;
+		// document.write(dd + " World");
+
+	</script>
+
+</head>
+
+<body>
+
+	<h2>자바스크립트</h2>
+		<p id="demo1"></p>
+		<p id="demo2">Hello</p>
+		<p id="demo3"></p>
+		<p id="demo4"></p>
+		<p id="demo5"></p>
+		<p id="demo6"></p>
+		<p id="demo7"></p>
+		<hr>
+		<p id="demo8"></p>
+		<p id="demo9"></p>
+		<p id="demo10"></p>
+		<hr>
+		<p id="demo11"></p>
+		<p id="demo12"></p>
+		<p id="demo13"></p>
+		<hr>
+		<p id="demo14"></p>
+		<p id="demo15"></p>
+		<p id="demo16"></p>
+		
+	<hr>
+		
+	<script type="text/javascript">
+	
+		var person = ["홍길동", "장길산", "임꺽정", "일지매"];
+		
+		// .innerHTML : 해당 요소에 HTML을 가져오거나(get) 설정함(set)
+		
+			// 현재 문서 중 id 가 demo1 인 요소에게 person 을 설정함 (setter)
+			document.getElementById("demo1").innerHTML = person;
+			
+			// 현재 문서 중 id 가 demo2 인 요소의 정보를 a로 가져옴 (getter)
+			var a = document.getElementById("demo2").innerHTML;
+			document.write(a + " World");
+			
+			// 현재 문서 중 id 가 demo3 인 요소에게 person 내에 있는 일부 정보를 설정함 (setter)
+			// innerHTML 사용 시 태그도 함께 추가할 수 있음
+			document.getElementById("demo3").innerHTML = "<h3>" + person[3] + "</h3>";
+		
+		// JavaScript 에서는 배열에 삽입, 삭제가 가능함
+		
+			// .shift()			: 맨 처음 데이터를 삭제
+			person.shift();
+			document.getElementById("demo4").innerHTML = person;
+			
+			// .pop()			: 맨 마지막 데이터 삭제
+			person.pop();
+			document.getElementById("demo5").innerHTML = person;
+			
+			// .unshift(data)	: 맨 앞에 데이터를 삽입
+			person.unshift("둘리");
+			document.getElementById("demo6").innerHTML = person;
+			
+			// .push(data)		: 맨 뒤에 데이터를 삽입
+			person.push("희동이");
+			document.getElementById("demo7").innerHTML = person;
+			
+		// 정렬하기
+		
+			var arr1 = ["Banana", "Orange", "Apple", "1", "2", "apple", "orange"];
+		
+			document.getElementById("demo8").innerHTML = arr1;
+		
+			// .sort()			: '숫자 - 대문자 - 소문자' 순서로 오름차순 정렬
+			document.getElementById("demo9").innerHTML = arr1.sort();
+				
+			// .reverse()		: sort()의 반대 순서로 내림차순 정렬
+			document.getElementById("demo10").innerHTML = arr1.reverse();
+			
+			
+			var arr2 = ["09", "05", "04", "08", "01", "07", "10", "03", "06", "02"];
+			
+			// String 으로 입력한 숫자들을 정렬 시 한 자리 숫자는 앞에 0을 붙여야 함
+			document.getElementById("demo11").innerHTML = arr2;
+			document.getElementById("demo12").innerHTML = arr2.sort();
+			document.getElementById("demo13").innerHTML = arr2.reverse();
+			
+			
+			var arr3 = [09, 05, 04, 08, 01, 07, 10, 03, 06, 02]
+			
+			// number 로 입력한 숫자들을 정렬할때는 한 자리 숫자 앞에 0을 붙여도 정렬이 제대로 되지 않음
+			document.getElementById("demo14").innerHTML = arr3;
+			document.getElementById("demo15").innerHTML = arr3.sort();
+			document.getElementById("demo16").innerHTML = arr3.reverse();
+			
+	</script>
+
+</body>
+
+</html>

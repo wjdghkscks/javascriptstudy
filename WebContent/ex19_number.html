@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Number</title>
+<style type="text/css">
+	* {
+		margin: 10px;
+		text-align: center;
+	}
+</style>
+<script type="text/javascript">
+
+/* 
+
+* number
+- 숫자는 사칙연산이 가능함
+- JAVA 와 달리, 문자형 숫자도 + 를 제외한 나머지 연산들이 가능함
+
+*/
+
+	var s1 = 10;
+	var s2 = 6;
+	
+	document.write(s1 + " + " + s2 + " = " +  (s1 + s2) + "<br>");
+	document.write(s1 + " - " + s2 + " = " +  (s1 - s2) + "<br>");
+	document.write(s1 + " * " + s2 + " = " +  (s1 * s2) + "<br>");
+	document.write(s1 + " / " + s2 + " = " +  (s1 / s2) + "<br>");
+	document.write(s1 + " % " + s2 + " = " +  (s1 % s2) + "<br>");
+	
+	document.write("<hr>");
+	
+	s1 = "10";
+	s2 = "6";
+	
+	// '+' 는 문자 연결자 역할을 하기 때문에 연산이 되지 않음
+	document.write(s1 + " + " + s2 + " = " +  (s1 + s2) + "<br>");
+	
+	document.write(s1 + " - " + s2 + " = " +  (s1 - s2) + "<br>");
+	document.write(s1 + " * " + s2 + " = " +  (s1 * s2) + "<br>");
+	document.write(s1 + " / " + s2 + " = " +  (s1 / s2) + "<br>");
+	document.write(s1 + " % " + s2 + " = " +  (s1 % s2) + "<br>");
+	
+	document.write("<hr>");
+	
+	// 숫자 & 문자형 숫자
+	s1 = 10;
+	s2 = "6";
+
+	// 문자 연결자 '+' 를 제외한 나머지 연산은 가능
+	document.write(s1 + " + " + s2 + " = " +  (s1 + s2) + "<br>");
+	document.write(s1 + " - " + s2 + " = " +  (s1 - s2) + "<br>");
+	document.write(s1 + " * " + s2 + " = " +  (s1 * s2) + "<br>");
+	document.write(s1 + " / " + s2 + " = " +  (s1 / s2) + "<br>");
+	document.write(s1 + " % " + s2 + " = " +  (s1 % s2) + "<br>");
+	
+	document.write("<hr>");
+	
+// Number 관련 메소드
+	
+	// toString()	: 숫자를 문자열로 변경
+	
+	s1 = 10;
+	s2 = 6;
+	
+	document.write(s1 + " + " + s2 + " = " +  (s1 + s2) + "<br>");
+	document.write(s1 + " + " + s2 + " = " +  (s1 + s2.toString()) + "<br>");
+	document.write(s1 + " + " + s2 + " = " +  ("" + s1 + s2) + "<br>");
+	
+	document.write("<hr>");
+	
+	// toFixed(num)	: 지정된 소수점 이하 자릿수를 반올림
+	//				  메소드 내에는 자연수만 입력 가능
+	
+	s1 = 9.55555;
+	s2 = 9.4444444;
+	
+	document.write("s1 반올림 : " + s1.toFixed() + "<br>");
+	document.write("s2 반올림 : " + s2.toFixed() + "<br>");
+	document.write("s1 반올림 : " + s1.toFixed(0) + "<br>");
+	document.write("s2 반올림 : " + s2.toFixed(0) + "<br>");
+	document.write("s1 반올림 : " + s1.toFixed(1) + "<br>");
+	document.write("s2 반올림 : " + s2.toFixed(1) + "<br>");
+	
+	document.write("<hr>");
+	
+	/* 
+	문자열 숫자를 숫자로 변환	
+	
+		1) Number()
+		2) parseInt()
+		3) parseFloat()
+		
+	에러 종류
+	
+		1) NaN (Not a Number)	: Number 자리에 다른 데이터가 들어온 경우
+		2) isNaN				: NaN 여부를 확인하여 참이면 true
+	*/
+
+	// boolean 값 true/false 는 1 / 0 으로 값이 저장되어 있음 
+	document.write(true + 10 + "<br>");				// 11
+	document.write(Number(true) + 10 + "<br>");		// 11
+	document.write(parseInt(true) + 10 + "<br>");	// Nan
+	document.write(parseFloat(true) + 10 + "<br>");	// Nan
+		
+	document.write("<hr>");
+	
+	document.write(true + 10 + "<br>");				// 11
+	document.write(Number(true) + 10 + "<br>");		// 11
+	document.write(parseInt(true) + 10 + "<br>");	// Nan
+	document.write(parseFloat(true) + 10 + "<br>");	// Nan
+		
+	document.write("<hr>");
+		
+	document.write(Number("10") + 10 + "<br>");		// 20
+	document.write(parseInt("10") + 10 + "<br>");	// 20
+	document.write(parseFloat("10") + 10 + "<br>");	// 20
+	
+	document.write("<hr>");
+	
+	document.write(Number("10.93") + 10 + "<br>");		// 20.93
+	document.write(parseInt("10.93") + 10 + "<br>");	// 20
+	document.write(parseFloat("10.93") + 10 + "<br>");	// 20.93
+	
+	document.write("<hr>");
+	
+	// 첫 글자가 문자인 경우
+	document.write(Number("A10") + 10 + "<br>");		// NaN
+	document.write(parseInt("A10") + 10 + "<br>");		// NaN
+	document.write(parseFloat("A10") + 10 + "<br>");	// NaN
+	
+	document.write("<hr>");
+	
+	// 중간 글자가 문자인 경우 
+	document.write(Number("10A.93") + 10 + "<br>");		// NaN
+	document.write(parseInt("10A.93") + 10 + "<br>");	// 20
+	document.write(parseFloat("10A.93") + 10 + "<br>");	// 20
+	
+	document.write("<hr>");
+	
+	// 끝 글자가 문자인 경우
+	document.write(Number("10.93A") + 10 + "<br>");		// NaN
+	document.write(parseInt("10.93A") + 10 + "<br>");	// 20
+	document.write(parseFloat("10.93A") + 10 + "<br>");	// 20.93
+	
+	document.write("<hr>");
+	
+	/*
+	
+	- Number() 는 인자에 문자가 섞여있을 경우 오류 발생
+	- parseInt(), parseFloat() 는 문자가 섞여있으면 그 이전 숫자까지는 인식
+	
+	*/
+	
+	// 문자열 숫자에 띄어쓰기가 섞여있어도 숫자만 인식
+	document.write(Number("   10.93   ") + 10 + "<br>");		// 20.93
+	document.write(parseInt("   10.93   ") + 10 + "<br>");		// 20
+	document.write(parseFloat("   10.93   ") + 10 + "<br>");	// 20.93
+	
+	document.write("<hr>");
+	
+	
+</script>
+
+</head>
+
+<body>
+
+
+</body>
+
+</html>

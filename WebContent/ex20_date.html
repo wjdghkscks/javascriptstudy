@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Date Class</title>
+
+<script type="text/javascript">
+	
+	document.write("<h3 style='text-align: center;'>");
+	document.write("날짜: " + new Date() + "<br>");
+	document.write("</h3>");
+	
+	document.write("<hr>");
+	
+	// .toDateString()	: 보기 쉬운 날짜 형식으로 변경
+	document.write("날짜: " + new Date().toDateString() + "<br>");
+							// 월 : 00 - 11		=> 원하는 월 수에서 -1 하여 입력
+	document.write("날짜: " + new Date(2020,06,09).toDateString() + "<br>");
+	document.write("날짜: " + new Date("2020/07/10").toDateString() + "<br>");
+	document.write("날짜: " + new Date("2020-07-11").toDateString() + "<br>");
+	
+	document.write("<hr>");
+	
+	/* 
+	
+	년, 월, 일, 시, 분, 초, 요일 별도로 구하기
+	
+		- .getFullYear()		: 연도
+		- .getMonth() + 1		: 월
+		- .getDate()			: 일
+		- .getHours()			: 시
+		- .getMinutes()			: 분
+		- .getSeconds()			: 초
+		- .getDay()				: 요일 (일요일:0 ~ 토요일:6)
+	
+	*/
+	
+	document.write("날짜: " 	+ new Date().toDateString() + "<br>");
+	document.write("날짜(년): " + new Date().getFullYear() + "년<br>");
+	document.write("날짜(월): " + (new Date().getMonth() + 1) + "월<br>");
+	document.write("날짜(일): " + new Date().getDate() + "일<br>");
+	document.write("날짜(시): " + new Date().getHours() + "시<br>");
+	document.write("날짜(분): " + new Date().getMinutes() + "분<br>");
+	document.write("날짜(초): " + new Date().getSeconds() + "초<br>");
+	document.write("날짜(요일): " + new Date().getDay() + "<br>");
+	
+</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
