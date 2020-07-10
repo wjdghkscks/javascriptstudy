@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>유효성 검사</title>
+<script type="text/javascript">
+
+	function myFunction() {
+		var text ;
+		var x = document.getElementById("numb").value;
+		if (x >= 1 && x <= 10) {
+			alert("좋았어👏");
+			document.getElementById("numb").focus();
+			return;			
+		} else {
+			alert("잘못 입력했는데🤔");
+			document.getElementById("numb").value = "";
+			document.getElementById("numb").focus();
+			return;
+		}
+	}
+	
+	function myFunction2() {
+		var text;
+		var x = document.getElementById("check").value;
+		if (x >= 1 && x <= 10 ) {
+			document.getElementById("text1").innerHTML = "좋았어😁";
+		} else {
+			document.getElementById("text1").innerHTML = "아니야😤";
+		}
+	}
+	
+</script>
+
+</head>
+
+<body>
+
+	<h1> Form 태그 유효성 검사 </h1>
+	
+	<p> 1부터 10까지만 입력하세요. </p>
+
+	<!-- form 태그 자식이 아니므로, 서버에 전달할 수 없음 -->
+	<input type="number" id="numb">
+	<button type="button" onclick="myFunction()">실행</button>
+	<p id="demo"></p>
+	
+	<hr>
+
+	<form method="post">
+		<p>please input a number between 1 and 10.</p>
+			<input type="number" id="check">
+			<button type="button" onclick="myFunction2()">실행</button>
+			<p id="text1"> </p>
+		</fieldset>
+	</form>	
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>이벤트</title>
+<script type="text/javascript">
+	
+	function turnOn() {
+		document.getElementById("img").src="images/pic_bulbon.gif";
+	}
+	
+	function turnOff() {
+		document.getElementById("img").src="images/pic_bulboff.gif";
+	}
+	
+	function turnOn2() {
+		document.getElementById("img2").src="images/pic_bulbon.gif";
+	}
+	
+	function turnOff2() {
+		document.getElementById("img2").src="images/pic_bulboff.gif";
+	}
+	
+	function viewOn() {
+		document.getElementById("img3").style.display="block";
+	}
+	
+	function viewOff() {
+		document.getElementById("img3").style.display="none";
+		
+	}
+	
+</script>
+
+</head>
+
+<body>
+
+	<div style="margin: auto; width: 100px;">
+		<p> <img id="img" src="images/pic_bulboff.gif"> </p>
+		<p> <button onclick="turnOn()">켜기</button>
+			<button onclick="turnOff()">끄기</button>
+		</p>
+		
+		<br>
+		
+		<span onmouseover="turnOn2()" onmouseout="turnOff2()">
+			<img id="img2" src="images/pic_bulboff.gif">
+		</span>
+		
+		<br><br><br><br><br><br>
+		
+		<p onmouseover="viewOn()" onmouseout="viewOff()">
+			Hello :)
+		</p>
+		<img id="img3" src="images/workplace.jpg" style="display: none;">
+		
+	</div>
+	
+</body>
+
+</html>

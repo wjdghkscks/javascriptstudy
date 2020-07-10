@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function red() {
+		document.getElementById("box1").style.background = "red";
+	}
+	function green() {
+		document.getElementById("box1").style.background = "green";
+	}
+	function blue() {
+		document.getElementById("box1").style.background = "blue";
+	}
+</script>
+</head>
+
+<body>
+	<div style="margin: auto; width: 300px; padding: 20px;">
+		<button onclick="red(this)">RED</button>
+		<button onclick="green(this)">GREEN</button>
+		<button onclick="blue(this)">BLUE</button>
+	</div>
+	<div id = "box1" style="margin: auto; border: 1px solid black;
+							width: 300px; height: 300px;">
+		<span style="margin-left: 120px">BOX1</span>
+	</div>
+</body>
+
+</html>

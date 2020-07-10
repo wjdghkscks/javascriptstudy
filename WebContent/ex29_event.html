@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>이벤트 ; onmouseover, onmouseout</title>
+<style type="text/css">
+
+	div {
+		width: 120px;
+		height: 20px;
+		padding: 40px;
+	}
+	
+	#box1 {
+		background: #acacac;
+	}
+	
+	#box2 {
+		background: tomato;
+	}
+	
+	#box3 {
+		background: rgb(255, 180, 0);
+	}
+	
+	#box4 {
+		background: skyblue;
+	}
+	
+	#box5 {
+		background: rgb(255, 100, 125);
+	}
+	
+</style>
+
+<script type="text/javascript">
+	
+	function mOver(obj) {
+		// setter
+		obj.innerHTML = "<h3>Thanks:)</h3>";
+	}
+	
+	function mOut(obj) {
+		obj.innerHTML = "Mouse Over Me 1";
+	}
+	
+	function mDown(obj) {
+		obj.style.background="pink";
+		obj.color = "white";
+		obj.innerHTML = "<h3>Thanks:)</h3>";
+	}
+	
+	function mUp(obj) {
+		obj.style.color="white";
+		obj.innerHTML = "WoW";
+	}
+	
+	function test1() {
+		document.getElementById("box3").style.background="purple";
+		document.getElementById("box3").style.color="white";
+		document.getElementById("box3").innerHTML="<h3>Thanks:)</h3>";
+	}
+	
+	function test2(obj) {
+		obj.style.background="pink";
+		obj.style.color = "white";
+		obj.innerHTML = "<h3>Thanks:)</h3>";
+	}
+	
+</script>
+
+</head>
+
+<body>
+	<!-- function_name(this) 에서 this 는 현재 진행 중인 객체를 의미함 -->
+	<div id="box1" onmouseover="mOver(this)" onmouseout="mOut(this)">Mouse Over Me 1</div>
+	<div id="box2" onmousedown="mDown(this)" onmouseup="mUp(this)">Click Me</div>
+	<div id="box3" onclick="test1()">Click Me 1</div>
+	<div id="box4" onclick="test2(this)">Click Me 2</div>
+	<div id="box5">Click Me 3</div>
+	<script type="text/javascript">
+		// .addEventLister(a, b): id가 box5 인 요소에 Event Listener 를 추가
+		// a 를 감지하면 b 를 실행
+		document.getElementById("box5").addEventListener("click", function() {
+			document.getElementById("box5").style.background="#777777";
+		});
+	</script>
+	
+</body>
+
+</html>
